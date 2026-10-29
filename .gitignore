@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-portable
+release
+dev-dist
+*.local
+test-results
+playwright-report
+

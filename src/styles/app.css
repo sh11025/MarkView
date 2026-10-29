@@ -1,0 +1,320 @@
+@import 'tailwindcss';
+
+/* 다크 계열 테마 판단 */
+@custom-variant dark (&:where(
+  [data-theme=dark], [data-theme=dark] *,
+  [data-theme=github-dark], [data-theme=github-dark] *,
+  [data-theme=dracula], [data-theme=dracula] *,
+  [data-theme=nord], [data-theme=nord] *,
+  [data-theme=monokai], [data-theme=monokai] *,
+  [data-theme=tokyo-night], [data-theme=tokyo-night] *,
+  [data-theme=forest], [data-theme=forest] *
+));
+
+/* 앱 화면(도구 막대·탭 등) 색상. 문서 본문 색은 document.css에 따로 있다 */
+:root,
+[data-theme='light'],
+[data-theme='github-light'] {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #f3f4f6;
+  --border: #e3e5e8;
+  --text: #1f2328;
+  --muted: #59636e;
+  --hover: rgba(15, 23, 42, 0.06);
+  --accent: #4f46e5;
+  --accent-fg: #ffffff;
+  --active-line: rgba(79, 70, 229, 0.05);
+  --selection: rgba(79, 70, 229, 0.18);
+  --font-ui: system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, 'D2Coding', monospace;
+
+  --cm-heading: #1e1b4b;
+  --cm-link: #2563eb;
+  --cm-code: #b45309;
+  --cm-muted: #6e7781;
+  --cm-accent: #4f46e5;
+  --cm-keyword: #a626a4;
+  --cm-string: #50a14f;
+  --cm-number: #986801;
+  --cm-function: #4078f2;
+}
+
+[data-theme='dark'],
+[data-theme='github-dark'] {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #11161d;
+  --border: #2b323b;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --hover: rgba(255, 255, 255, 0.07);
+  --accent: #818cf8;
+  --accent-fg: #0d1117;
+  --active-line: rgba(129, 140, 248, 0.07);
+  --selection: rgba(129, 140, 248, 0.28);
+
+  --cm-heading: #c7d2fe;
+  --cm-link: #79c0ff;
+  --cm-code: #f0b46c;
+  --cm-muted: #8b949e;
+  --cm-accent: #a5b4fc;
+  --cm-keyword: #ff7b72;
+  --cm-string: #a5d6ff;
+  --cm-number: #79c0ff;
+  --cm-function: #d2a8ff;
+}
+
+[data-theme='dracula'] {
+  --bg: #21222c;
+  --surface: #282a36;
+  --surface-2: #191a21;
+  --border: #44475a;
+  --text: #f8f8f2;
+  --muted: #a9b1d6;
+  --hover: rgba(255, 255, 255, 0.07);
+  --accent: #bd93f9;
+  --accent-fg: #191a21;
+  --active-line: rgba(189, 147, 249, 0.08);
+  --selection: rgba(189, 147, 249, 0.28);
+
+  --cm-heading: #bd93f9;
+  --cm-link: #8be9fd;
+  --cm-code: #f1fa8c;
+  --cm-muted: #9aa5ce;
+  --cm-accent: #ff79c6;
+  --cm-keyword: #ff79c6;
+  --cm-string: #f1fa8c;
+  --cm-number: #bd93f9;
+  --cm-function: #50fa7b;
+}
+
+[data-theme='nord'] {
+  --bg: #242933;
+  --surface: #2e3440;
+  --surface-2: #3b4252;
+  --border: #434c5e;
+  --text: #eceff4;
+  --muted: #b0bac9;
+  --hover: rgba(236, 239, 244, 0.07);
+  --accent: #88c0d0;
+  --accent-fg: #1d212a;
+  --active-line: rgba(136, 192, 208, 0.08);
+  --selection: rgba(136, 192, 208, 0.28);
+
+  --cm-heading: #88c0d0;
+  --cm-link: #81a1c1;
+  --cm-code: #ebcb8b;
+  --cm-muted: #a5b1c2;
+  --cm-accent: #88c0d0;
+  --cm-keyword: #81a1c1;
+  --cm-string: #a3be8c;
+  --cm-number: #b48ead;
+  --cm-function: #88c0d0;
+}
+
+[data-theme='sepia'] {
+  --bg: #f4ecd8;
+  --surface: #fcf8f2;
+  --surface-2: #efe4ce;
+  --border: #dcd2be;
+  --text: #382f2d;
+  --muted: #6e5e57;
+  --hover: rgba(56, 47, 45, 0.06);
+  --accent: #8c6239;
+  --accent-fg: #ffffff;
+  --active-line: rgba(140, 98, 57, 0.06);
+  --selection: rgba(140, 98, 57, 0.2);
+
+  --cm-heading: #5c3d2e;
+  --cm-link: #7a4b2a;
+  --cm-code: #8c4a27;
+  --cm-muted: #76665f;
+  --cm-accent: #8c6239;
+  --cm-keyword: #9c3d2b;
+  --cm-string: #3b6e38;
+  --cm-number: #8c5218;
+  --cm-function: #6b428a;
+}
+
+[data-theme='monokai'] {
+  --bg: #1e1f1c;
+  --surface: #272822;
+  --surface-2: #1b1c18;
+  --border: #3e3d32;
+  --text: #f8f8f2;
+  --muted: #b2b2a2;
+  --hover: rgba(248, 248, 242, 0.07);
+  --accent: #a6e22e;
+  --accent-fg: #1b1c18;
+  --active-line: rgba(166, 226, 46, 0.07);
+  --selection: rgba(166, 226, 46, 0.24);
+
+  --cm-heading: #a6e22e;
+  --cm-link: #66d9ef;
+  --cm-code: #e6db74;
+  --cm-muted: #a8a897;
+  --cm-accent: #f92672;
+  --cm-keyword: #f92672;
+  --cm-string: #e6db74;
+  --cm-number: #ae81ff;
+  --cm-function: #a6e22e;
+}
+
+[data-theme='tokyo-night'] {
+  --bg: #16161e;
+  --surface: #1a1b26;
+  --surface-2: #24283b;
+  --border: #292e42;
+  --text: #c0caf5;
+  --muted: #9aa5ce;
+  --hover: rgba(192, 202, 245, 0.07);
+  --accent: #7aa2f7;
+  --accent-fg: #16161e;
+  --active-line: rgba(122, 162, 247, 0.08);
+  --selection: rgba(122, 162, 247, 0.26);
+
+  --cm-heading: #7aa2f7;
+  --cm-link: #7dcfff;
+  --cm-code: #e0af68;
+  --cm-muted: #9aa5ce;
+  --cm-accent: #bb9af7;
+  --cm-keyword: #bb9af7;
+  --cm-string: #9ece6a;
+  --cm-number: #ff9e64;
+  --cm-function: #7aa2f7;
+}
+
+[data-theme='forest'] {
+  --bg: #0b120f;
+  --surface: #0e1713;
+  --surface-2: #15221c;
+  --border: #1e3028;
+  --text: #ecfdf5;
+  --muted: #99b8a9;
+  --hover: rgba(236, 253, 245, 0.07);
+  --accent: #10b981;
+  --accent-fg: #0b120f;
+  --active-line: rgba(16, 185, 129, 0.08);
+  --selection: rgba(16, 185, 129, 0.25);
+
+  --cm-heading: #6ee7b7;
+  --cm-link: #34d399;
+  --cm-code: #fcd34d;
+  --cm-muted: #8eb0a0;
+  --cm-accent: #10b981;
+  --cm-keyword: #34d399;
+  --cm-string: #a7f3d0;
+  --cm-number: #fcd34d;
+  --cm-function: #6ee7b7;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* 인쇄: 앱 화면은 숨기고 문서 본문만 */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 16mm;
+  }
+
+  .no-print,
+  .editor-pane,
+  .code-copy {
+    display: none !important;
+  }
+
+  html,
+  body,
+  #root,
+  #root > div,
+  main,
+  .preview-pane,
+  .preview-scroll {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+  }
+
+  .preview-pane.hidden {
+    display: block !important;
+  }
+
+  .markdown-body {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}
+
+/* 슬래시(/) 메뉴 및 자동완성 팝업 스타일 보정 (CodeMirror 기본 max-height 10em 덮어쓰기 및 중복 라벨 방지) */
+.cm-tooltip.cm-tooltip-autocomplete {
+  min-width: 360px !important;
+  max-width: calc(100vw - 20px) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  background-color: var(--surface) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  overflow: hidden !important;
+}
+
+.cm-tooltip.cm-tooltip-autocomplete > ul {
+  max-height: 360px !important;
+  overflow-y: auto !important;
+  font-family: inherit !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--border) transparent !important;
+}
+
+@media (max-height: 720px), (max-width: 600px) {
+  .cm-tooltip.cm-tooltip-autocomplete > ul {
+    max-height: min(360px, 50vh) !important;
+  }
+}
+
+.cm-tooltip.cm-tooltip-autocomplete > ul > li.cm-slash-item {
+  min-height: 44px !important;
+  max-height: 52px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 슬래시 메뉴 항목에서는 CodeMirror 기본 label과 detail 숨김 (이름 중복 방지) */
+.cm-tooltip.cm-tooltip-autocomplete > ul > li.cm-slash-item .cm-completionLabel,
+.cm-tooltip.cm-tooltip-autocomplete > ul > li.cm-slash-item .cm-completionDetail,
+.cm-tooltip.cm-tooltip-autocomplete > ul > li.cm-slash-empty-item .cm-completionLabel,
+.cm-tooltip.cm-tooltip-autocomplete > ul > li.cm-slash-empty-item .cm-completionDetail {
+  display: none !important;
+}
+
+.cm-tooltip.cm-tooltip-autocomplete > ul > .cm-completionSection {
+  height: 24px !important;
+  line-height: 24px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+  background-color: var(--surface-2) !important;
+  padding: 0 12px !important;
+  border-top: 1px solid var(--border) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-sizing: border-box !important;
+}
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MarkView - 이동 중...</title>
+  <script>
+    // GitHub Pages SPA 404 리다이렉트: 저장소 루트의 index.html로 복귀
+    var path = window.location.pathname;
+    var segments = path.split('/').filter(Boolean);
+    var base = './';
+    if (segments.length > 0 && window.location.hostname.endsWith('github.io')) {
+      base = '/' + segments[0] + '/';
+    }
+    window.location.replace(base);
+  </script>
+</head>
+<body style="font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f8fafc; color: #334155;">
+  <p>MarkView를 불러오는 중입니다...</p>
+</body>
+</html>

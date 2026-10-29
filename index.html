@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkView</title>
+    <meta name="description" content="오프라인에서도 동작하는 마크다운 에디터 & 뷰어" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <script>
+      // 첫 화면 깜빡임 방지용. 실제 설정은 IndexedDB에 있고 앱 시작 후 다시 적용됨
+      (function () {
+        try {
+          var t = localStorage.getItem('markview-theme');
+          var sysDark = matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t && t !== 'system') {
+            document.documentElement.dataset.theme = t;
+          } else {
+            document.documentElement.dataset.theme = sysDark ? 'dark' : 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>

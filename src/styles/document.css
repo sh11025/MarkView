@@ -1,0 +1,871 @@
+/*
+ * 문서 본문 스타일. 미리보기와 HTML 내보내기가 이 파일을 함께 쓴다.
+ * 그래서 Tailwind 클래스에 의존하지 않고, 이 파일만으로 완결되어야 한다.
+ */
+:root,
+[data-theme='light'],
+[data-theme='github-light'] {
+  --doc-bg: #ffffff;
+  --doc-text: #1f2328;
+  --doc-muted: #59636e;
+  --doc-border: #d1d9e0;
+  --doc-link: #0969da;
+  --doc-code-bg: #f6f8fa;
+  --doc-inline-code-bg: rgba(129, 139, 152, 0.15);
+  --doc-table-header: #f6f8fa;
+  --doc-mark: #fff8c5;
+  --doc-search-bg: rgba(250, 204, 21, 0.45);
+  --doc-search-current-bg: #f97316;
+  --doc-search-current-text: #ffffff;
+
+  --hl-keyword: #cf222e;
+  --hl-string: #0a3069;
+  --hl-number: #0550ae;
+  --hl-comment: #59636e;
+  --hl-function: #8250df;
+  --hl-type: #953800;
+  --hl-variable: #953800;
+}
+
+[data-theme='dark'],
+[data-theme='github-dark'] {
+  --doc-bg: #0d1117;
+  --doc-text: #f0f6fc;
+  --doc-muted: #9198a1;
+  --doc-border: #3d444d;
+  --doc-link: #2f81f7;
+  --doc-code-bg: #151b23;
+  --doc-inline-code-bg: rgba(101, 108, 118, 0.3);
+  --doc-table-header: #151b23;
+  --doc-mark: rgba(187, 128, 9, 0.35);
+  --doc-search-bg: rgba(234, 179, 8, 0.38);
+  --doc-search-current-bg: #ea580c;
+  --doc-search-current-text: #ffffff;
+
+  --hl-keyword: #ff7b72;
+  --hl-string: #a5d6ff;
+  --hl-number: #79c0ff;
+  --hl-comment: #9198a1;
+  --hl-function: #d2a8ff;
+  --hl-type: #ffa657;
+  --hl-variable: #ffa657;
+}
+
+[data-theme='dracula'] {
+  --doc-bg: #21222c;
+  --doc-text: #f8f8f2;
+  --doc-muted: #b4befe;
+  --doc-border: #44475a;
+  --doc-link: #4190e2;
+  --doc-code-bg: #1e1f29;
+  --doc-inline-code-bg: rgba(68, 71, 90, 0.6);
+  --doc-table-header: #282a36;
+  --doc-mark: rgba(241, 250, 140, 0.25);
+  --doc-search-bg: rgba(241, 250, 140, 0.32);
+  --doc-search-current-bg: #ff79c6;
+  --doc-search-current-text: #191a21;
+
+  --hl-keyword: #ff79c6;
+  --hl-string: #f1fa8c;
+  --hl-number: #bd93f9;
+  --hl-comment: #9aa5ce;
+  --hl-function: #50fa7b;
+  --hl-type: #8be9fd;
+  --hl-variable: #ffb86c;
+}
+
+[data-theme='nord'] {
+  --doc-bg: #20252e;
+  --doc-text: #f6f8fb;
+  --doc-muted: #b8c2d1;
+  --doc-border: #434c5e;
+  --doc-link: #4690d2;
+  --doc-code-bg: #1c2029;
+  --doc-inline-code-bg: rgba(67, 76, 94, 0.6);
+  --doc-table-header: #2e3440;
+  --doc-mark: rgba(235, 203, 139, 0.25);
+  --doc-search-bg: rgba(235, 203, 139, 0.34);
+  --doc-search-current-bg: #d08770;
+  --doc-search-current-text: #242933;
+
+  --hl-keyword: #81a1c1;
+  --hl-string: #a3be8c;
+  --hl-number: #b48ead;
+  --hl-comment: #a5b1c2;
+  --hl-function: #88c0d0;
+  --hl-type: #8fbcbb;
+  --hl-variable: #d8dee9;
+}
+
+[data-theme='sepia'] {
+  --doc-bg: #fcf8f2;
+  --doc-text: #211916;
+  --doc-muted: #6e5e57;
+  --doc-border: #dcd2be;
+  --doc-link: #0c69cf;
+  --doc-code-bg: #f4ecd8;
+  --doc-inline-code-bg: rgba(140, 98, 57, 0.14);
+  --doc-table-header: #f4ecd8;
+  --doc-mark: #f3de9a;
+  --doc-search-bg: rgba(217, 119, 6, 0.28);
+  --doc-search-current-bg: #b45309;
+  --doc-search-current-text: #ffffff;
+
+  --hl-keyword: #9c3d2b;
+  --hl-string: #2e5e2b;
+  --hl-number: #8c5218;
+  --hl-comment: #6e5e57;
+  --hl-function: #6b428a;
+  --hl-type: #7a4b2a;
+  --hl-variable: #7a4b2a;
+}
+
+[data-theme='monokai'] {
+  --doc-bg: #1e1f1c;
+  --doc-text: #f8f8f2;
+  --doc-muted: #b8b8a8;
+  --doc-border: #3e3d32;
+  --doc-link: #3391e8;
+  --doc-code-bg: #181916;
+  --doc-inline-code-bg: rgba(62, 61, 50, 0.65);
+  --doc-table-header: #272822;
+  --doc-mark: rgba(230, 219, 116, 0.25);
+  --doc-search-bg: rgba(230, 219, 116, 0.35);
+  --doc-search-current-bg: #fd971f;
+  --doc-search-current-text: #1e1f1c;
+
+  --hl-keyword: #f92672;
+  --hl-string: #e6db74;
+  --hl-number: #ae81ff;
+  --hl-comment: #a8a897;
+  --hl-function: #a6e22e;
+  --hl-type: #66d9ef;
+  --hl-variable: #fd971f;
+}
+
+[data-theme='tokyo-night'] {
+  --doc-bg: #16161e;
+  --doc-text: #e6ecff;
+  --doc-muted: #9aa5ce;
+  --doc-border: #292e42;
+  --doc-link: #3b82f6;
+  --doc-code-bg: #121218;
+  --doc-inline-code-bg: rgba(41, 46, 66, 0.7);
+  --doc-table-header: #24283b;
+  --doc-mark: rgba(224, 175, 104, 0.25);
+  --doc-search-bg: rgba(224, 175, 104, 0.34);
+  --doc-search-current-bg: #ff9e64;
+  --doc-search-current-text: #16161e;
+
+  --hl-keyword: #bb9af7;
+  --hl-string: #9ece6a;
+  --hl-number: #ff9e64;
+  --hl-comment: #9aa5ce;
+  --hl-function: #7aa2f7;
+  --hl-type: #2ac3de;
+  --hl-variable: #c0caf5;
+}
+
+[data-theme='forest'] {
+  --doc-bg: #0e1713;
+  --doc-text: #ecfdf5;
+  --doc-muted: #99b8a9;
+  --doc-border: #1e3028;
+  --doc-link: #129666;
+  --doc-code-bg: #0b120f;
+  --doc-inline-code-bg: rgba(30, 48, 40, 0.7);
+  --doc-table-header: #15221c;
+  --doc-mark: rgba(252, 211, 77, 0.22);
+  --doc-search-bg: rgba(252, 211, 77, 0.32);
+  --doc-search-current-bg: #10b981;
+  --doc-search-current-text: #0b120f;
+
+  --hl-keyword: #34d399;
+  --hl-string: #a7f3d0;
+  --hl-number: #fcd34d;
+  --hl-comment: #8eb0a0;
+  --hl-function: #6ee7b7;
+  --hl-type: #5eead4;
+  --hl-variable: #d1fae5;
+}
+
+/* CSS Custom Highlight API: 미리보기 문서 내 검색 강조 (DOM 변형 없음) */
+::highlight(markview-search) {
+  background-color: var(--doc-search-bg);
+  color: inherit;
+}
+
+::highlight(markview-search-current) {
+  background-color: var(--doc-search-current-bg);
+  color: var(--doc-search-current-text);
+}
+
+.markdown-body {
+  color: var(--doc-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.markdown-body.font-sans-doc {
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+}
+
+.markdown-body.font-serif-doc {
+  font-family: 'Noto Serif KR', 'Nanum Myeongjo', 'Batang', Georgia, serif;
+}
+
+.markdown-body.font-mono-doc {
+  font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, 'D2Coding', monospace;
+}
+
+.markdown-body.font-rounded-doc {
+  font-family: ui-rounded, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.markdown-body.align-left {
+  text-align: left;
+}
+
+.markdown-body.align-justify {
+  text-align: justify;
+}
+
+.markdown-body.break-keep-all {
+  word-break: keep-all;
+}
+
+.markdown-body.break-normal {
+  word-break: normal;
+}
+
+.markdown-body.code-wrap pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: hidden;
+}
+
+.markdown-body.code-wrap pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.markdown-body > :first-child {
+  margin-top: 0;
+}
+
+.markdown-body :is(p, ul, ol, blockquote, table, pre, .code-block, .math-block, .mermaid-block, hr) {
+  margin: 0 0 1em;
+}
+
+.markdown-body :is(h1, h2, h3, h4, h5, h6) {
+  margin: 1.6em 0 0.6em;
+  font-weight: 700;
+  line-height: 1.3;
+  scroll-margin-top: 16px;
+}
+.markdown-body h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--doc-border);
+}
+.markdown-body h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--doc-border);
+}
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body a {
+  color: var(--doc-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.markdown-body a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.markdown-body :is(ul, ol) {
+  padding-left: 1.75em;
+}
+.markdown-body li + li {
+  margin-top: 0.25em;
+}
+.markdown-body li > :is(ul, ol) {
+  margin: 0.25em 0 0;
+}
+.markdown-body ul.task-list {
+  list-style: none;
+  padding-left: 0.5em;
+}
+.markdown-body .task-list .task-list {
+  padding-left: 1.5em;
+}
+.markdown-body .task-checkbox {
+  width: 1em;
+  height: 1em;
+  margin: 0 0.4em 0 0;
+  vertical-align: -0.1em;
+  accent-color: var(--doc-link);
+  cursor: pointer;
+}
+
+/* 체크리스트 진행률 카드 */
+.markdown-body .checklist-progress {
+  margin: 1em 0 0.5em 0;
+  padding: 0.6em 0.9em;
+  border-radius: 8px;
+  border: 1px solid var(--doc-border);
+  background-color: var(--doc-code-bg);
+  font-size: 0.85em;
+  user-select: none;
+}
+
+.markdown-body .checklist-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4em;
+}
+
+.markdown-body .checklist-progress-label {
+  font-weight: 600;
+  color: var(--doc-text);
+}
+
+.markdown-body .checklist-progress-percent {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--doc-muted);
+}
+
+.markdown-body .checklist-progress progress {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: none;
+  background-color: var(--doc-border);
+  color: var(--doc-link);
+}
+
+.markdown-body .checklist-progress progress::-webkit-progress-bar {
+  background-color: var(--doc-border);
+}
+
+.markdown-body .checklist-progress progress::-webkit-progress-value {
+  background-color: var(--doc-link);
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+.markdown-body .checklist-progress progress::-moz-progress-bar {
+  background-color: var(--doc-link);
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+/* 완료 상태 (초록색 계열) */
+.markdown-body .checklist-progress.is-complete {
+  border-color: rgba(34, 197, 94, 0.4);
+  background-color: rgba(34, 197, 94, 0.08);
+}
+
+.markdown-body .checklist-progress.is-complete .checklist-progress-percent {
+  color: #16a34a;
+}
+
+.markdown-body .checklist-progress.is-complete progress::-webkit-progress-value {
+  background-color: #16a34a;
+}
+
+.markdown-body .checklist-progress.is-complete progress::-moz-progress-bar {
+  background-color: #16a34a;
+}
+
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .checklist-progress.is-complete {
+  border-color: rgba(74, 222, 128, 0.35);
+  background-color: rgba(74, 222, 128, 0.1);
+}
+
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .checklist-progress.is-complete .checklist-progress-percent {
+  color: #4ade80;
+}
+
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .checklist-progress.is-complete progress::-webkit-progress-value {
+  background-color: #22c55e;
+}
+
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .checklist-progress.is-complete progress::-moz-progress-bar {
+  background-color: #22c55e;
+}
+
+/* 본문 이미지 확대 보기 커서 */
+.markdown-body img:not(.img-missing):not(.img-pending) {
+  cursor: zoom-in;
+}
+
+.markdown-body a img {
+  cursor: pointer;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: var(--doc-muted);
+  border-left: 0.25em solid var(--doc-border);
+}
+
+.markdown-body hr {
+  height: 1px;
+  border: 0;
+  background: var(--doc-border);
+  margin: 2em 0;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.markdown-body mark {
+  background: var(--doc-mark);
+  color: inherit;
+}
+
+/* 코드 */
+.markdown-body code {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, 'D2Coding', monospace;
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+  background: var(--doc-inline-code-bg);
+}
+.markdown-body pre {
+  margin: 0;
+  padding: 1em;
+  overflow-x: auto;
+  line-height: 1.5;
+  background: var(--doc-code-bg);
+  border-radius: 8px;
+}
+.markdown-body pre code {
+  padding: 0;
+  background: none;
+  font-size: 0.85em;
+}
+.markdown-body .code-block {
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.markdown-body .code-block pre {
+  border-radius: 0;
+}
+.markdown-body .code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em 0.8em;
+  font-size: 0.75em;
+  color: var(--doc-muted);
+  background: var(--doc-code-bg);
+  border-bottom: 1px solid var(--doc-border);
+}
+.markdown-body .code-copy {
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+.markdown-body .code-copy:hover {
+  color: var(--doc-text);
+  background: var(--doc-inline-code-bg);
+}
+
+/* highlight.js 토큰 */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-literal {
+  color: var(--hl-keyword);
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-attr,
+.hljs-selector-attr {
+  color: var(--hl-string);
+}
+.hljs-number,
+.hljs-symbol {
+  color: var(--hl-number);
+}
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: var(--hl-comment);
+  font-style: italic;
+}
+.hljs-title,
+.hljs-section,
+.hljs-title.function_ {
+  color: var(--hl-function);
+}
+.hljs-type,
+.hljs-title.class_ {
+  color: var(--hl-type);
+}
+.hljs-variable,
+.hljs-template-variable,
+.hljs-params {
+  color: var(--hl-variable);
+}
+.hljs-deletion {
+  color: var(--hl-keyword);
+}
+.hljs-addition {
+  color: #1a7f37;
+}
+
+/* 표 */
+.markdown-body table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.markdown-body :is(th, td) {
+  padding: 0.4em 0.9em;
+  border: 1px solid var(--doc-border);
+}
+.markdown-body th {
+  font-weight: 600;
+  background: var(--doc-table-header);
+}
+.markdown-body table.editable-table :is(th, td) {
+  cursor: cell;
+}
+
+/* 콜아웃 */
+.markdown-body .callout {
+  --callout: var(--doc-link);
+  padding: 0.6em 1em;
+  color: var(--doc-text);
+  border-left: 0.25em solid var(--callout);
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--callout) 8%, transparent);
+}
+.markdown-body .callout > :last-child {
+  margin-bottom: 0;
+}
+.markdown-body .callout p:empty {
+  display: none;
+}
+.markdown-body .callout-title {
+  margin-bottom: 0.3em;
+  font-weight: 700;
+  color: var(--callout);
+}
+.markdown-body .callout-tip {
+  --callout: #1a7f37;
+}
+.markdown-body .callout-important {
+  --callout: #8250df;
+}
+.markdown-body .callout-warning {
+  --callout: #9a6700;
+}
+.markdown-body .callout-caution {
+  --callout: #cf222e;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .callout-tip {
+  --callout: #3fb950;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .callout-important {
+  --callout: #ab7df8;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .callout-warning {
+  --callout: #d29922;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .callout-caution {
+  --callout: #f85149;
+}
+
+/* 이모지 콜아웃 상자 */
+.markdown-body .emoji-callout {
+  --callout: var(--doc-link);
+  padding: 0.65em 1em;
+  color: var(--doc-text);
+  border-left: 0.25em solid var(--callout);
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--callout) 9%, transparent);
+}
+.markdown-body .emoji-callout > :last-child {
+  margin-bottom: 0;
+}
+.markdown-body .emoji-callout-icon {
+  margin-right: 0.35em;
+}
+.markdown-body .emoji-callout-tip,
+.markdown-body .emoji-callout-success {
+  --callout: #1a7f37;
+}
+.markdown-body .emoji-callout-warning {
+  --callout: #9a6700;
+}
+.markdown-body .emoji-callout-important,
+.markdown-body .emoji-callout-target {
+  --callout: #8250df;
+}
+.markdown-body .emoji-callout-danger {
+  --callout: #cf222e;
+}
+.markdown-body .emoji-callout-fire {
+  --callout: #c2410c;
+}
+.markdown-body .emoji-callout-info,
+.markdown-body .emoji-callout-note,
+.markdown-body .emoji-callout-memo {
+  --callout: var(--doc-link);
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body :is(.emoji-callout-tip, .emoji-callout-success) {
+  --callout: #3fb950;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .emoji-callout-warning {
+  --callout: #d29922;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body :is(.emoji-callout-important, .emoji-callout-target) {
+  --callout: #ab7df8;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .emoji-callout-danger {
+  --callout: #f85149;
+}
+:is(
+  [data-theme='dark'],
+  [data-theme='github-dark'],
+  [data-theme='dracula'],
+  [data-theme='nord'],
+  [data-theme='monokai'],
+  [data-theme='tokyo-night'],
+  [data-theme='forest']
+) .markdown-body .emoji-callout-fire {
+  --callout: #fb923c;
+}
+
+/* 수식 */
+.markdown-body .math-block {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 다이어그램 */
+.markdown-body .mermaid-wrap {
+  position: relative;
+  margin: 0 0 1em;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.markdown-body .mermaid-edit {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 5;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--doc-code-bg);
+  border: 1px solid var(--doc-border);
+  color: var(--doc-muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+.markdown-body .mermaid-wrap:hover .mermaid-edit {
+  opacity: 1;
+}
+@media (hover: none), (max-width: 640px) {
+  .markdown-body .mermaid-edit {
+    opacity: 1;
+  }
+}
+
+.markdown-body .mermaid-block {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  min-height: 2em;
+}
+.markdown-body .mermaid-block svg {
+  max-width: 100%;
+  height: auto;
+}
+.markdown-body .mermaid-status {
+  font-size: 0.85em;
+  color: var(--doc-muted);
+}
+.markdown-body .mermaid-error {
+  width: 100%;
+  color: #cf222e;
+  white-space: pre-wrap;
+  font-size: 0.8em;
+}
+
+/* 상대 경로 이미지 누락 및 로딩 대기 표시 */
+.markdown-body .img-missing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85em;
+  color: var(--doc-muted);
+  background: rgba(128, 128, 128, 0.08);
+  border: 1px dashed var(--doc-border);
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  vertical-align: middle;
+}
+.markdown-body .img-pending {
+  min-width: 2rem;
+  min-height: 2rem;
+  display: inline-block;
+  background: rgba(128, 128, 128, 0.05);
+  border: 1px dashed var(--doc-border);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+@media print {
+  /* 어두운 테마가 선택되어 있어도 인쇄물은 항상 밝은 본문 색상을 유지 */
+  .markdown-body {
+    --doc-bg: #ffffff !important;
+    --doc-text: #1f2328 !important;
+    --doc-muted: #59636e !important;
+    --doc-border: #d1d9e0 !important;
+    --doc-link: #0969da !important;
+    --doc-code-bg: #f6f8fa !important;
+    --doc-inline-code-bg: rgba(129, 139, 152, 0.15) !important;
+    --doc-table-header: #f6f8fa !important;
+    --doc-mark: #fff8c5 !important;
+    color: #1f2328 !important;
+    background: #ffffff !important;
+  }
+  .markdown-body :is(pre, .code-block, table, .callout, .mermaid-block, .math-block, figure, img) {
+    break-inside: avoid;
+  }
+  .markdown-body :is(h1, h2, h3, h4) {
+    break-after: avoid;
+  }
+  .markdown-body :is(.code-copy, .mermaid-edit) {
+    display: none !important;
+  }
+}
