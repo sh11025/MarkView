@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-label="MarkView 화면 구성: 위쪽 메뉴, 탭 줄, 목차, 도구 막대, 글 쓰는 곳, 미리보기">
+  <g font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif">
+    <rect width="1200" height="640" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+
+    <!-- 창 -->
+    <rect x="40" y="36" width="760" height="470" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- 1 위쪽 메뉴 -->
+    <rect x="40" y="36" width="760" height="48" rx="14" fill="#eef2ff"/>
+    <rect x="40" y="70" width="760" height="14" fill="#eef2ff"/>
+    <text x="58" y="67" font-size="16" font-weight="800" fill="#312e81">MarkView</text>
+    <g font-size="13" fill="#334155">
+      <text x="150" y="66">새 문서</text><text x="212" y="66">템플릿</text><text x="268" y="66">열기 ▾</text>
+      <text x="324" y="66">저장 ▾</text><text x="380" y="66">내보내기 ▾</text>
+    </g>
+    <rect x="560" y="48" width="158" height="26" rx="13" fill="#ffffff" stroke="#c7d2fe"/>
+    <text x="574" y="66" font-size="12" fill="#475569">편집</text>
+    <text x="616" y="66" font-size="12" fill="#475569">분할</text>
+    <rect x="652" y="51" width="54" height="20" rx="10" fill="#4f46e5"/>
+    <text x="661" y="66" font-size="12" fill="#ffffff">미리보기</text>
+    <text x="760" y="67" font-size="16" fill="#475569">⚙</text>
+
+    <!-- 2 탭 줄 -->
+    <rect x="40" y="84" width="760" height="34" fill="#f1f5f9"/>
+    <rect x="52" y="90" width="92" height="28" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="62" y="109" font-size="12" fill="#1e293b">문서1.md ●</text>
+    <text x="158" y="109" font-size="12" fill="#64748b">문서2.md</text>
+    <text x="226" y="109" font-size="15" fill="#64748b">＋</text>
+    <text x="780" y="109" text-anchor="end" font-size="12" fill="#059669">✓ 자동 저장됨 14:32</text>
+
+    <!-- 3 목차 -->
+    <rect x="40" y="118" width="150" height="388" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="54" y="144" font-size="12" font-weight="700" fill="#334155">목차 | 파일</text>
+    <text x="54" y="172" font-size="12" fill="#475569">▸ 제목 1</text>
+    <text x="68" y="196" font-size="12" fill="#64748b">소제목 A</text>
+    <text x="68" y="220" font-size="12" fill="#64748b">소제목 B</text>
+
+    <!-- 4 도구 막대 -->
+    <rect x="190" y="118" width="610" height="36" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="204" y="141" font-size="13" fill="#475569">↶ ↷  B  I  S  &lt;&gt;  🔗  H1 H2 H3  •  1.  ☑  ❝  ▦  ∑  ◇  ―</text>
+    <rect x="718" y="124" width="68" height="24" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="728" y="141" font-size="12" font-weight="700" fill="#4338ca">삽입 ＋</text>
+
+    <!-- 5 글 쓰는 곳 -->
+    <rect x="190" y="154" width="305" height="352" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="204" y="182" font-size="12" fill="#94a3b8" font-family="Consolas,monospace">1  # 이번 주 할 일</text>
+    <text x="204" y="206" font-size="12" fill="#94a3b8" font-family="Consolas,monospace">2  - [x] 기획서</text>
+    <text x="204" y="230" font-size="12" fill="#94a3b8" font-family="Consolas,monospace">3  - [ ] 디자인</text>
+    <text x="204" y="254" font-size="12" fill="#4f46e5" font-family="Consolas,monospace">4  /</text>
+
+    <!-- 6 미리보기 -->
+    <rect x="495" y="154" width="305" height="352" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="512" y="188" font-size="20" font-weight="800" fill="#0f172a">이번 주 할 일</text>
+    <rect x="512" y="204" width="270" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="524" y="222" font-size="11" font-weight="700" fill="#1e293b">체크리스트 1 / 2 완료</text>
+    <text x="754" y="222" font-size="11" fill="#475569">50%</text>
+    <rect x="524" y="232" width="246" height="6" rx="3" fill="#e2e8f0"/>
+    <rect x="524" y="232" width="123" height="6" rx="3" fill="#4f46e5"/>
+    <text x="518" y="272" font-size="13" fill="#334155">☑ 기획서</text>
+    <text x="518" y="296" font-size="13" fill="#334155">☐ 디자인</text>
+
+    <!-- "/" 메뉴 -->
+    <rect x="212" y="266" width="236" height="120" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+    <rect x="216" y="272" width="228" height="34" rx="6" fill="#4f46e5"/>
+    <text x="228" y="288" font-size="12" font-weight="800" fill="#ffffff">큰 제목</text>
+    <text x="228" y="302" font-size="10" fill="#e0e7ff">글 맨 위 제목에 씁니다</text>
+    <text x="228" y="328" font-size="12" font-weight="700" fill="#1e293b">표</text>
+    <text x="228" y="346" font-size="10" fill="#64748b">칸이 있는 표를 만듭니다</text>
+    <text x="228" y="372" font-size="12" font-weight="700" fill="#1e293b">수식(공식)</text>
+
+    <!-- 번호 표식 -->
+    <g font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">
+      <circle cx="30" cy="60" r="15" fill="#4f46e5"/><text x="30" y="65">1</text>
+      <circle cx="30" cy="101" r="15" fill="#0284c7"/><text x="30" y="106">2</text>
+      <circle cx="30" cy="250" r="15" fill="#059669"/><text x="30" y="255">3</text>
+      <circle cx="800" cy="136" r="15" fill="#d97706"/><text x="800" y="141">4</text>
+      <circle cx="342" cy="540" r="15" fill="#db2777"/><text x="342" y="545">5</text>
+      <circle cx="648" cy="540" r="15" fill="#7c3aed"/><text x="648" y="545">6</text>
+    </g>
+    <line x1="342" y1="525" x2="342" y2="510" stroke="#db2777" stroke-width="2"/>
+    <line x1="648" y1="525" x2="648" y2="510" stroke="#7c3aed" stroke-width="2"/>
+
+    <!-- 범례 -->
+    <g font-size="16">
+      <text x="840" y="62" font-weight="800" fill="#1e1b4b" font-size="20">화면 읽는 법</text>
+      <circle cx="852" cy="96" r="11" fill="#4f46e5"/><text x="852" y="101" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">1</text>
+      <text x="874" y="101" fill="#1e293b"><tspan font-weight="700">위쪽 메뉴</tspan> — 열기·저장·내보내기</text>
+      <circle cx="852" cy="136" r="11" fill="#0284c7"/><text x="852" y="141" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">2</text>
+      <text x="874" y="141" fill="#1e293b"><tspan font-weight="700">탭 줄</tspan> — 열어 둔 문서·저장 상태</text>
+      <circle cx="852" cy="176" r="11" fill="#059669"/><text x="852" y="181" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">3</text>
+      <text x="874" y="181" fill="#1e293b"><tspan font-weight="700">목차·파일</tspan> — 제목 목록·폴더 문서</text>
+      <circle cx="852" cy="216" r="11" fill="#d97706"/><text x="852" y="221" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">4</text>
+      <text x="874" y="221" fill="#1e293b"><tspan font-weight="700">도구 막대</tspan> — 서식·삽입 ＋</text>
+      <circle cx="852" cy="256" r="11" fill="#db2777"/><text x="852" y="261" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">5</text>
+      <text x="874" y="261" fill="#1e293b"><tspan font-weight="700">글 쓰는 곳</tspan> — / 로 삽입 메뉴</text>
+      <circle cx="852" cy="296" r="11" fill="#7c3aed"/><text x="852" y="301" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">6</text>
+      <text x="874" y="301" fill="#1e293b"><tspan font-weight="700">미리보기</tspan> — 완성된 모양</text>
+    </g>
+    <rect x="840" y="340" width="320" height="120" rx="12" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="856" y="370" font-size="16" font-weight="800" fill="#312e81">💡 기억할 것 하나</text>
+    <text x="856" y="398" font-size="15" fill="#334155">빈 줄에서 <tspan font-weight="800" fill="#4f46e5">/</tspan> 를 누르면</text>
+    <text x="856" y="422" font-size="15" fill="#334155">넣을 수 있는 것이 설명과 함께</text>
+    <text x="856" y="446" font-size="15" fill="#334155">전부 나옵니다.</text>
+    <text x="600" y="610" text-anchor="middle" font-size="15" fill="#64748b">좁은 화면(폰)에서는 글 쓰는 곳과 미리보기가 위아래로 나뉘고, 메뉴 글자는 아이콘만 보일 수 있습니다.</text>
+  </g>
+</svg>

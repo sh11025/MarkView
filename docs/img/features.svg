@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" role="img" aria-label="MarkView 숫자로 보기: 템플릿 43종, 수식 42종, 다이어그램 20종, 테마 8종, 이모지 320여 종, 단축키 4개">
+  <g font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif">
+    <rect width="1200" height="470" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="600" y="64" text-anchor="middle" font-size="28" font-weight="800" fill="#1e1b4b">숫자로 보는 MarkView</text>
+
+    <!-- 1행 -->
+    <g>
+      <rect x="40" y="96" width="350" height="160" rx="18" fill="#eef2ff" stroke="#c7d2fe"/>
+      <text x="215" y="170" text-anchor="middle" font-size="64" font-weight="800" fill="#4338ca">43</text>
+      <text x="215" y="206" text-anchor="middle" font-size="22" font-weight="700" fill="#1e1b4b">문서 템플릿</text>
+      <text x="215" y="236" text-anchor="middle" font-size="17" fill="#64748b">회의록 · 보고서 · 이력서 · 가계부…</text>
+
+      <rect x="425" y="96" width="350" height="160" rx="18" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text x="600" y="170" text-anchor="middle" font-size="64" font-weight="800" fill="#059669">42</text>
+      <text x="600" y="206" text-anchor="middle" font-size="22" font-weight="700" fill="#064e3b">수식(공식) 카드</text>
+      <text x="600" y="236" text-anchor="middle" font-size="17" fill="#64748b">대수 · 미적분 · 통계 · 물리…</text>
+
+      <rect x="810" y="96" width="350" height="160" rx="18" fill="#fffbeb" stroke="#fde68a"/>
+      <text x="985" y="170" text-anchor="middle" font-size="64" font-weight="800" fill="#d97706">20</text>
+      <text x="985" y="206" text-anchor="middle" font-size="22" font-weight="700" fill="#78350f">다이어그램 예시</text>
+      <text x="985" y="236" text-anchor="middle" font-size="17" fill="#64748b">순서도 · 시퀀스 · ER · 간트…</text>
+    </g>
+
+    <!-- 2행 -->
+    <g>
+      <rect x="40" y="284" width="350" height="160" rx="18" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="215" y="358" text-anchor="middle" font-size="64" font-weight="800" fill="#db2777">8</text>
+      <text x="215" y="394" text-anchor="middle" font-size="22" font-weight="700" fill="#831843">테마</text>
+      <text x="215" y="424" text-anchor="middle" font-size="17" fill="#64748b">라이트 · 다크 · Sepia · Nord…</text>
+
+      <rect x="425" y="284" width="350" height="160" rx="18" fill="#f0f9ff" stroke="#bae6fd"/>
+      <text x="600" y="358" text-anchor="middle" font-size="64" font-weight="800" fill="#0284c7">320+</text>
+      <text x="600" y="394" text-anchor="middle" font-size="22" font-weight="700" fill="#0c4a6e">이모지 단축코드</text>
+      <text x="600" y="424" text-anchor="middle" font-size="17" fill="#64748b">:smile: → 😄  :rocket: → 🚀</text>
+
+      <rect x="810" y="284" width="350" height="160" rx="18" fill="#f5f3ff" stroke="#ddd6fe"/>
+      <text x="985" y="358" text-anchor="middle" font-size="64" font-weight="800" fill="#7c3aed">4</text>
+      <text x="985" y="394" text-anchor="middle" font-size="22" font-weight="700" fill="#4c1d95">단축키 (이게 전부)</text>
+      <text x="985" y="424" text-anchor="middle" font-size="17" fill="#64748b">저장 · 찾기 · 취소 · 다시 실행</text>
+    </g>
+  </g>
+</svg>

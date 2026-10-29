@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-label="MarkView를 쓰는 3가지 방법: 웹 주소, USB 파일, 앱 설치">
+  <g font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif">
+    <rect width="1200" height="430" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+
+    <!-- 카드 1 -->
+    <g>
+      <rect x="32" y="32" width="360" height="366" rx="20" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+      <circle cx="82" cy="86" r="26" fill="#4f46e5"/>
+      <text x="82" y="95" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">1</text>
+      <text x="124" y="95" font-size="26" font-weight="800" fill="#1e1b4b">웹 주소로 열기</text>
+      <text x="212" y="190" text-anchor="middle" font-size="64">🌐</text>
+      <text x="212" y="236" text-anchor="middle" font-size="20" fill="#334155">주소만 열면 끝</text>
+      <line x1="64" y1="262" x2="360" y2="262" stroke="#e2e8f0"/>
+      <text x="64" y="296" font-size="18" fill="#64748b">필요한 것</text>
+      <text x="64" y="324" font-size="20" font-weight="700" fill="#1e293b">인터넷 (처음 한 번만)</text>
+      <text x="64" y="360" font-size="18" fill="#64748b">이럴 때</text>
+      <text x="64" y="384" font-size="20" font-weight="700" fill="#4f46e5">평소 가장 편하게 쓰고 싶을 때</text>
+    </g>
+
+    <!-- 카드 2 -->
+    <g>
+      <rect x="420" y="32" width="360" height="366" rx="20" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+      <circle cx="470" cy="86" r="26" fill="#059669"/>
+      <text x="470" y="95" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">2</text>
+      <text x="512" y="95" font-size="26" font-weight="800" fill="#064e3b">USB·파일로 열기</text>
+      <text x="600" y="190" text-anchor="middle" font-size="64">💾</text>
+      <text x="600" y="236" text-anchor="middle" font-size="20" fill="#334155">MarkView.html 더블클릭</text>
+      <line x1="452" y1="262" x2="748" y2="262" stroke="#e2e8f0"/>
+      <text x="452" y="296" font-size="18" fill="#64748b">필요한 것</text>
+      <text x="452" y="324" font-size="20" font-weight="700" fill="#1e293b">파일 1개 (인터넷 불필요)</text>
+      <text x="452" y="360" font-size="18" fill="#64748b">이럴 때</text>
+      <text x="452" y="384" font-size="20" font-weight="700" fill="#059669">인터넷이 없거나 USB로 옮길 때</text>
+    </g>
+
+    <!-- 카드 3 -->
+    <g>
+      <rect x="808" y="32" width="360" height="366" rx="20" fill="#ffffff" stroke="#fde68a" stroke-width="2"/>
+      <circle cx="858" cy="86" r="26" fill="#d97706"/>
+      <text x="858" y="95" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">3</text>
+      <text x="900" y="95" font-size="26" font-weight="800" fill="#78350f">앱으로 설치</text>
+      <text x="988" y="190" text-anchor="middle" font-size="64">🖥️</text>
+      <text x="988" y="236" text-anchor="middle" font-size="20" fill="#334155">바탕화면·시작 메뉴에서 실행</text>
+      <line x1="840" y1="262" x2="1136" y2="262" stroke="#e2e8f0"/>
+      <text x="840" y="296" font-size="18" fill="#64748b">필요한 것</text>
+      <text x="840" y="324" font-size="20" font-weight="700" fill="#1e293b">웹 주소에서 [설치] 한 번</text>
+      <text x="840" y="360" font-size="18" fill="#64748b">이럴 때</text>
+      <text x="840" y="384" font-size="20" font-weight="700" fill="#d97706">거의 매일 쓸 때</text>
+    </g>
+  </g>
+</svg>

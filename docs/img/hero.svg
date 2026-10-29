@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="MarkView: 설치도, 회원가입도, 인터넷도 필요 없는 마크다운 글쓰기 도구">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <g font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif">
+    <rect width="1200" height="340" rx="24" fill="url(#bg)"/>
+    <text x="600" y="106" text-anchor="middle" font-size="64" font-weight="800" fill="#ffffff">MarkView</text>
+    <text x="600" y="158" text-anchor="middle" font-size="26" fill="#e0e7ff">설치도, 회원가입도, 인터넷도 필요 없는 마크다운 글쓰기 도구</text>
+
+    <g font-size="21" font-weight="700" fill="#ffffff" text-anchor="middle">
+      <rect x="46"   y="198" width="262" height="64" rx="32" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.4"/>
+      <text x="177"  y="238">✍️ 쓰는 즉시 미리보기</text>
+      <rect x="328"  y="198" width="262" height="64" rx="32" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.4"/>
+      <text x="459"  y="238">💾 자동 저장</text>
+      <rect x="610"  y="198" width="262" height="64" rx="32" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.4"/>
+      <text x="741"  y="238">📴 인터넷 없이도</text>
+      <rect x="892"  y="198" width="262" height="64" rx="32" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.4"/>
+      <text x="1023" y="238">🔒 글은 내 컴퓨터에만</text>
+    </g>
+
+    <text x="600" y="308" text-anchor="middle" font-size="20" fill="#c7d2fe">Chrome · Edge · Firefox · Brave  |  PC · 폰  |  USB 휴대 가능  |  무료</text>
+  </g>
+</svg>
